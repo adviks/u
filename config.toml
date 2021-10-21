@@ -1,6 +1,6 @@
 baseURL = "https://asadadvik.com"
 languageCode = "en-us"
-title = "Asad Advik"
+title = "Upscify"
 theme = "icarus"
 summaryLength = 30
 paginate = 5
