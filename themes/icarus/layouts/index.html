@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<p class="home-p">Hey, I'm Asad Advik. Welcome to my blog.</p>
+<p></p>
+
+<h2 class="gradient" style="margin-bottom: 5px">Newest Articles</h2>
+{{- range first 4 (where .Site.RegularPages "Section" "articles") -}}
+<div class="post-home">
+  <h4 class="post-title-list">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </h4>
+  {{ $dateTime := .PublishDate.Format "2006-01-02" }} {{ $dateFormat :=
+  .Site.Params.dateFormat | default "Jan 2" }}
+
+  <time class="post-date" datetime="{{ $dateTime }}"
+    >{{ .PublishDate.Format $dateFormat }}</time
+  >
+  <!-- <p class="post-summary">{{ .Summary }}</p> -->
+</div>
+{{ end }}
+<br />
+<!-- {{ partial "subscribe.html"}} -->
+
+{{ end }}

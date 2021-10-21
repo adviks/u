@@ -1,0 +1,13 @@
+<div class="meta">
+<span><img  class="post-avatar" src="https://i.postimg.cc/263Xqx8q/https-bucketeer-e05bbc84-baa3-437e-9518-adb32be77984-s3-amazonaws-com-public-images-b2ab7e68-f0ac.png" alt="author image"></span>
+<span class="post-author">
+	Asad Advik
+</span>
+
+
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+<span><time class="post-date" datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+</span>
+
+</div>

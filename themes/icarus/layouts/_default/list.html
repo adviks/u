@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<h1 class="gradient">Articles</h1>
+
+{{ range where .Pages "Section" "articles" }}
+<div class="post-card-archive">
+  <div class="upper">
+    <img class="featuredImage-archive" src="{{.Params.featuredImage}}" />
+  </div>
+  <div class="lower">
+    <a class="post-title-archive" href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+    {{ $dateTime := .PublishDate.Format "2006-01-02" }} {{ $dateFormat :=
+    .Site.Params.dateFormat | default "Jan 2, 2006" }}
+    <time
+      style="margin: 0px"
+      class="post-date-archive"
+      datetime="{{ $dateTime }}"
+      >{{ .PublishDate.Format $dateFormat }}</time
+    >
+
+    <p class="post-summary">{{.Params.description}}</p>
+  </div>
+</div>
+{{ end }} {{ end }}

@@ -1,0 +1,67 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: static/img
+public_folder: /img
+collections:
+  - name: 'article'
+    label: 'Article'
+    folder: 'content/articles'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - { label: "Type", name: "type", widget: "select", options: ["Inter", "Bespoke Serif"]}
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: "Topic", name: "topic", widget: "select", options: ["Philosophy", "Finance", "SelfHelp"], required: false}
+      - { label: "Featured Image", name: "featuredImage", widget: "image", choose_url: true, required: false}
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+    
+  - name: 'Contact'
+    label: 'Contact'
+    folder: 'content/contact'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  
+  - name: 'Subscribe'
+    label: 'Subscribe'
+    folder: 'content/subscribe'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  
+  - name: 'Confirm'
+    label: 'Confirm'
+    folder: 'content/confirm'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  
+  - name: 'Thanks'
+    label: 'Thanks'
+    folder: 'content/thanks'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

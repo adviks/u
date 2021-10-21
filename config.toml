@@ -1,0 +1,24 @@
+baseURL = "https://asadadvik.com"
+languageCode = "en-us"
+title = "Asad Advik"
+theme = "icarus"
+summaryLength = 30
+paginate = 5
+enableEmoji = true
+
+googleAnalytics = "G-J16SFM05KT"
+
+[params]
+description = "Blog, Book Notes, Newsletter and More"
+images = ['https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727__340.jpg']
+title = 'Asad Advik'
+
+[taxonomies]
+category = 'categories'
+topic = "topic"
+
+[permalinks]
+articles = '/:slug/'
+
+[social]
+twitter = "asadadvik"
